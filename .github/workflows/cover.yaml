@@ -41,5 +41,8 @@ jobs:
         shell: Rscript {0}
 
       - name: Test coverage
-        run: covr::zero_coverage(covr::package_coverage())
+        run: |
+          out <- covr::zero_coverage(covr::package_coverage())
+          print(out)
+          if (nrow(out)) stop("some lines not covered")
         shell: Rscript {0}

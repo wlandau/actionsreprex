@@ -3,5 +3,5 @@ unstyled <- function() {
 }
 
 untested <- function() {
-  a <- "a"
+  a <- 1
 }
